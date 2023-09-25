@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <style>
+    nav a::after {
+      content: " | ";
+    }
+
+    nav a:last-child::after {
+      content: "";
+    }
+
+    @media (max-width: 500px) {
+      th {
+        display: none;
+      }
+
+      tr, td {
+        display: block;
+      }
+
+      td:nth-child(1):not(:empty) {
+        font-weight: 600;
+        margin-top: 0.5em;
+      }
+
+      td:nth-child(2) {
+        margin-left: 1em;
+        padding-top: 0;
+      }
+
+      td:nth-child(3):not(:empty)::before {
+        content: "Required Reading ";
+        font-weight: 600;
+        display: block;
+      }
+
+      td:nth-child(3) {
+        margin-left: 1em;
+      }
+
+      td ul {
+        padding-left: 2em;
+      }
+    }
+  </style>
+  <title>Probabilistic Programming and AI WS23 -- TU Wien</title>
+</head>
+<body>
+  <header>
+    <h1>Probabilistic Programming and AI WS23 - TU Wien</h1>
+    <nav>
+      <a href="#team">Team and Overview</a>
+      <a href="#registration">Registration</a>
+      <a href="#timetable">Timetable/Lectures</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#grading">Grading</a>
+      <a href="#academichonesty">Academic Honesty</a>
+
+    </nav>
+  </header>
+  <main>
+    <section id="team">
+      <h2>Team and Overview</h2>
+
+      <dl>
+        <dt>Professor</dt>
+        <dd><a href="https://ipa-lab.github.io/">Jürgen Cito</a></dd>
+
+        <dt>University Assistant</dt>
+        <dd><a href="mailto: markus.h.boeck@tuwien.ac.at">Markus Böck</a></dd>
+
+        <!-- <dt>Course email</dt>
+        <dd><a href="mailto: web-engineering@big.tuwien.ac.at">web-engineering@big.tuwien.ac.at</a></dd> -->
+
+      </dl>
+    </section>
+
+
+    <section id="registration">
+      <h2>Registration</h2>
+      <p><em>Important!</em> Please register on <a href="https://tiss.tuwien.ac.at/education/course/courseRegistration.xhtml?dswid=9916&dsrid=585&courseNr=194150&semester=2023W">TISS</a> until <em>Wednesday, 09.10.2023 23:55 (strict deadline!)</em> to be able to participate in this course.</p>
+
+      <p>
+        All students registered in TISS until the deadline will have access to the course.<br>
+        To officially register, you have to complete Assignment 1 (A1), which will be available on <a href="https://tuwel.tuwien.ac.at/course/view.php?id=59228">TUWEL</a>.<br>
+        You will be able to deregister until 17.10.2023 23:55, which is also the deadline for A1. As soon as you submit A1, you will receive a certificate (Zeugnis).
+      </p>
+
+      <section>
+        <h3>Prerequisities</h3>
+        <p>
+          We expect that you have working knowledge of Python and are familiar with <a href="https://jupyter.org">Jupyter Notebooks</a>.<br>
+          We also require basic knowledge of probability theory and statistics.
+          This course will feature a lot of mathematics for expository reasons, altough we do not require you to do any mathematical manipulations in the exercises.
+        </p>
+      </section>
+    </section>
+
+    <section id="timetable">
+      <h2>Timetable/Lectures</h2>
+
+      <p>The following timetable lists all important dates for the course (lectures, tests, deadlines, tutor office hours) together with accompanying material (required reading, slides as PDFs, link to lecture videos).</p>
+
+      <!-- <p>Required reading should be done in preparation <em>before</em> the lecture!<br>
+         Reading material is not always strictly "reading", but can also involve interactive online exercises.<br>
+         <em>Note that:</em> The contents of the listed required readings will be part of the tests.
+      </p> -->
+
+      <p>
+        If a deadline is listed on a certain date, assume it due at 23:55 that day unless specified otherwise.
+      </p>
+
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" width="120">Date</th>
+              <th scope="col">Content</th>
+              <th scope="col">Recommended Reading</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- Lecture 1 -->
+              <td>04.10.</td>
+              <td>
+                Kick-Off & Lecture 1:
+                <ul>
+                  <li>Introduction to Probabilistic Programming</li>
+                  <li>Probability and Bayesian Statistics Primer</li>
+                </ul>
+              </td>
+            </tr>
+
+
+            <!-- Release A1 -->
+            <tr class="release">
+              <td>04.10.</td>
+              <td colspan="2">Release Assignment 1 (A1)</td>
+            </tr>
+
+            <!-- TISS Registration Deadline -->
+            <tr class="release">
+              <td>09.10.</td>
+              <td colspan="2">TISS Registration Deadline</td>
+            </tr>
+
+            <!-- Lecture 2 -->
+            <tr>
+              <td>11.10.</td>
+              <td>
+                Lecture 2:<br>
+                <ul>
+                  <li>Bayesian Inference and Generative Modelling</li>
+                  <li>Probabilistic Programming Languages</li>
+                  <li>Implementation Designs</li>
+                  <li>Minimal PPL Implementation</li>
+                  <li>Independent Sampling</li>
+                </ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+            
+            <!-- Release A2 -->
+            <tr class="release">
+              <td>11.10.</td>
+              <td colspan="2">Release Assignment 2 (A2)</td>
+            </tr>
+
+            <!-- Tutor Hour -->
+            <tr class="tutorhour">
+              <td>12.10.</td>
+              <td colspan="2">
+                Tutor Office Hours 13:15-15:00 (online)
+              </td>
+            </tr>
+
+            <!-- Deadline A1 -->
+            <tr class="deadline">
+              <td>17.10.</td>
+              <td colspan="2">A1 Deadline</td>
+            </tr>
+
+            <!-- Lecture 3 -->
+            <tr>
+              <td>18.10.</td>
+              <td>
+                Lecture 3:
+                <ul>
+                  <li>Dependent Sampling</li>
+                  <li>Markov Chain Monte Carlo</li>
+                  <li>Metropolis Hastings Algorithm</li>
+                  <li>Hamiltonian Monte Carlo</li>
+                </ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+            <!-- Lecture 4 -->
+            <tr>
+              <td>25.10.</td>
+              <td>
+                Lecture 4:
+                <ul>
+                  <li>Variational Inference</li>
+                  <li>Automatic Differentiation VI</li>
+                  <li>Stochastic VI</li>
+                </ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+            <!-- Tutor Hour -->
+            <tr class="tutorhour">
+              <td>24.10.</td>
+              <td colspan="2">
+                Tutor Office Hours 13:15-15:00 (online)
+              </td>
+            </tr>
+
+            <!-- Deadline A2 -->
+            <tr class="deadline">
+              <td>29.10.</td>
+              <td colspan="2">A2 Deadline</td>
+            </tr>
+
+            <!-- Test 1-->
+            <tr class="test">
+              <td>30.10.</td>
+              <td colspan="2">Assignment Discussion Session A1 & A2</td>
+            </tr>
+
+
+            <!-- Release A3 -->
+            <tr class="release">
+              <td>30.10.</td>
+              <td colspan="2">Release Assignment 3 (A3)</td>
+            </tr>
+
+
+            <!-- Tutor Hour -->
+            <tr class="tutorhour">
+              <td>09.11.</td>
+              <td colspan="2">
+                Tutor Office Hours 13:15-15:00 (online)
+              </td>
+            </tr>
+
+            <!-- Deadline A3 -->
+            <tr class="deadline">
+              <td>15.11.</td>
+              <td colspan="2">A3 Deadline</td>
+            </tr>
+
+            <!-- Release A4 -->
+            <tr class="release">
+              <td>15.11.</td>
+              <td colspan="2">Release Assignment 4 (A4)</td>
+            </tr>
+
+            <!-- Lecture 5 -->
+            <tr>
+              <td>06.12.</td>
+              <td>
+                Lecture 5:
+                <ul>
+                  <li>Advanced Inference</li>
+                  <li>TBD</li>
+                </ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+            <!-- Tutor Hour -->
+            <tr class="tutorhour">
+              <td>07.12.</td>
+              <td colspan="2">
+                Tutor Office Hours 13:15-15:00 (online)
+              </td>
+            </tr>
+
+            <!-- Lecture 6 -->
+            <tr>
+              <td>13.12.</td>
+              <td>
+                Lecture 6:
+                <ul>
+                  <li>Probabilistic AI</li>
+                  <li>TBD</li>
+                </ul>
+              </td>
+              <td>
+              </td>
+            </tr>
+
+
+            <!-- Deadline A4 -->
+            <tr class="deadline">
+              <td>13.12.</td>
+              <td colspan="2">A4 Deadline</td>
+            </tr>
+
+            <!-- Deadline Project -->
+            <tr class="deadline">
+              <td>13.12.</td>
+              <td colspan="2">Project Proposal Deadline</td>
+            </tr>
+            
+            <!-- Test 2-->
+            <tr class="test">
+              <td>20.12.</td>
+              <td colspan="2">Assignment Discussion Session A3 & A4</td>
+            </tr>
+
+
+
+            <!-- Test 3-->
+            <tr class="test">
+              <td>31.01.</td>
+              <td colspan="2">Final Project Presentations</td>
+            </tr>
+
+            
+          </tbody>
+        </table>
+
+    <section id="assignments">
+      <h2>Assignments</h2>
+      <article>
+        In addition to the lecture, you will implement a minimal probabilistic programming language in <strong>individual</strong> assignments (A1 to A4):
+        <ul>
+
+          <li><em>Assignment 1 (A1) - Introduction to PPL (10 points)</em>: This will be your first hands-on experience with probabilistic programming.</li>
+
+          <li><em>Assignment 2 (A2) - Minimal PPL + Likelihood Weighting (15 points)</em>: You learn how to implement the core of a PPL in Python and write your first inference algorithm.</li>
+
+          <li><em>Assignment 3 (A3) - Metropolis Hastings (15 points)</em>: You implement the general-purpose  Metropolis Hastings inference algorithm</li>
+
+          <li><em>Assignment 4 (A4) - HMC and ADVI (25 points)</em>: You implement the state-of-the-art inference algorithms HMC and ADVI</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="project">
+      <h2>Group Project</h2>
+      <article>
+        In groups of up to 5 students, you will propose and work on a final project.
+        There will be a presentation session at the end of the semester, where each group is expected to present for 20 minutes and answer questions.<br>
+        
+        Projects may be anything related to probabilistic programming.<br>
+        For instance,
+        <ul>
+          <li>Applying probabilistic programming to a non-trivial problem.</li>
+          <li>Implementing an advanced inference algorithm in our minimal PPL.</li>
+          <li>Implementing a PPL following a different design principle.</li>
+          <li>Benchmarking inference algorithms on a benchmark problem set.</li>
+        </ul>
+        We will give more project ideas during the lectures.
+      </article>
+    </section>
+
+    <section id="grading">
+      <h2>Grading</h2>
+
+      Your grade will be a combination of assignments scores and final project score.
+
+      <ul>
+        <li>40% Assignments</li>
+        <li>60% Project</li>
+      </ul>
+      <h3>Grading Scale</h3>
+      The points of the theoretical and practical part sum to exactly 100 points.
+      The points map to grades as follows:
+      <ul>
+        <li><em>S1:</em> 88-100</li>
+        <li><em>U2:</em> 75-87.99</li>
+        <li><em>B3:</em> 63-74.99</li>
+        <li><em>G4:</em> 50-62.99</li>
+        <li><em>N5:</em> 0-49.99</li>
+      </ul>
+    </section>
+
+    <section id="academichonesty">
+      <h3>Academic Honesty</h3>
+      We expect all students to work on their own (both for the practical assignments and the tests).
+      Any kind of plagiarism will result in expulsion of the course with a grade N5 (Nicht Genügend).
+    </section>
+  </main>
+</body>
+</html>
