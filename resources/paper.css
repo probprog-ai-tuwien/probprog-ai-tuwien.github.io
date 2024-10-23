@@ -4,18 +4,22 @@
 .paper-bibtex {
     display:none
 }
-.paper-desc {
+.paper-container {
     width:100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.paper-desc {
+    width:70%;
+}
 
 .paper-image {
-    width: 100%;
+    width: 30%;
     overflow: hidden;
     padding: 10px;
     margin-top:10px;
+    display: block;
 }
 
 .paper-image img {
@@ -25,4 +29,13 @@
 
 pre, code {
     background-color: transparent;
+}
+
+@media (max-width: 500px) {
+    .paper-container {
+        display: block;
+    }
+    .paper-desc {
+        width:100%;
+    }
 }

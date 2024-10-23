@@ -1,5 +1,6 @@
 .portrait {
     float: left;  
+    margin-right: 30px;
 }
 
 .portrait img {
@@ -10,7 +11,6 @@
 }
 
 .contact {
-  margin-left: 30px;
   text-align: left;
   float: left;
 }
