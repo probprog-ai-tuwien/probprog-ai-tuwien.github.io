@@ -1,0 +1,28 @@
+.paper-abstract {
+    display:none
+}
+.paper-bibtex {
+    display:none
+}
+.paper-desc {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paper-image {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    margin-top:10px;
+}
+
+.paper-image img {
+    width: 200px;
+    overflow:hidden
+}
+
+pre, code {
+    background-color: transparent;
+}

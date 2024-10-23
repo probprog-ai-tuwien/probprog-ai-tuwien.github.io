@@ -5,15 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
   <link rel="stylesheet" href="resources/contacts.css">
+  <link rel="stylesheet" href="resources/paper.css">
   <link rel="shortcut icon" href="https://tuwel.tuwien.ac.at/pluginfile.php/2/theme_boost_union/favicon/64x64/1729573587/tuwel_favicon.png" />
   <title>Probabilistic Programming -- TU Wien</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery ||
+    document.write('<script src="js/libs/jquery-1.11.3.min.js"><\/script>')</script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+    $("a.bibtex").click(function(event) {
+    
+    var label = $(this);
+    $(this).nextAll("div.paper-bibtex").first().slideToggle("fast",
+    function(){
+    if ($(this).is(":visible")) {
+    label.text('hide bibtex');    
+    } else {
+    label.text('bibtex');                
+    }
+    });
+    });
+
+    $("a.abstract").click(function(event) {
+    
+    var label = $(this);
+    $(this).nextAll("div.paper-abstract").first().slideToggle("fast",
+    function(){
+    if ($(this).is(":visible")) {
+    label.text('hide abstract');    
+    } else {
+    label.text('abstract');                
+    }
+    });
+    });
+    });
+  </script>
+
 </head>
 <body>
   <h1>Probabilistic Programming @ TU Wien</h1>
   <p>
     Probabilistic programming provides an intuitive means to specify Bayesian models as programs and to automatically perform posterior inference with general-purpose algorithms.<br>
     This makes probabilistic modelling more accessible to non-experts in Bayesian statictics, however, it comes with new challenges.
-    Through the lens of software engineering, we develop new approaches to improve the probabilistic programming experience.
+    Through the lens of software engineering, we explore new approaches to improve the probabilistic programming experience.
   </p>
   <h2>Team</h2>
   This project is part of the <a href="https://ipa-lab.github.io/">IPA lab</a>.<br>
@@ -80,6 +115,40 @@
 
   <h2>Selected Publications</h2>
 
-
+    <div class="paper-desc">
+      <div>
+        <h3>Language-Agnostic Static Analysis of Probabilistic Programs</h3>
+        <i>Markus Böck, Michael Schröder, and Jürgen Cito. ASE 2024</i>
+        <p>
+          Describes a framework which allows the implementation of program analyses in a high-level API which target problems specific to the probabilistic programming environment.
+          Once the support  probabilistic programming language which implements the required bindings
+        </p>
+      </div>
+      <div class="paper-image">
+        <img src="resources/papers/overview.png"/>
+      </div>
+    </div>
+    
+    [<a href="https://dl.acm.org/doi/10.1145/3691620.3695031">paper</a> | <a href="https://github.com/lasapp/lasapp">code</a> | <a class="bibtex">bibtex</a> | <a class="abstract">abstract</a>]
+    <div class="paper-abstract">
+        Probabilistic programming allows developers to focus on the modeling aspect in the Bayesian workflow by abstracting away the posterior inference machinery.
+        In practice, however, programming errors specific to the probabilistic environment are hard to fix without deep knowledge of the underlying systems.
+        Like in classical software engineering, static program analysis methods could be employed to catch many of these errors.
+        In this work, we present the first framework to formulate static analyses for probabilistic programs in a language-agnostic manner: LASAPP.
+        While prior work focused on specific languages, all analyses written with our framework can be readily applied to new languages by adding easy-to-implement API bindings.
+        Our prototype supports five popular probabilistic programming languages out-of-the-box.
+        We demonstrate the effectiveness and expressiveness of the LASAPP framework by presenting four provably-correct language-agnostic probabilistic program analyses that address problems discussed in the literature and evaluate them on over 200 real-world programs.
+    </div>
+    <div class="paper-bibtex">
+        <code>
+          @inproceedings{boeck2024language-agnostic,<br>
+            title={Language-Agnostic Static Analysis of Probabilistic Programs},<br>
+            author={B{\"o}ck, Markus and Schr{\"o}der, Michael and Cito, J{\"u}rgen},<br>
+            booktitle={Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering},<br>
+            pages={78--90},<br>
+            year={2024}<br>
+          }
+        </code>
+    </div>
 </body>
 </html>
