@@ -45,10 +45,10 @@ pre, code {
         width:100%;
     }
     .paper-image {
-        width:50%;
+        width:100%;
     }
     .paper-image img {
-        max-width: 210px;
+        width: 210px;
         overflow:hidden
     }
 }
