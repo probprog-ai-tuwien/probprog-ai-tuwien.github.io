@@ -1,0 +1,22 @@
+.portrait {
+    float: left;  
+}
+
+.portrait img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   height: 200px;
+}
+
+.contact {
+  margin-left: 30px;
+  text-align: left;
+  float: left;
+}
+
+#contacts {
+    position:relative;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
