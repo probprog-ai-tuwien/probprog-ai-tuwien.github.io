@@ -118,10 +118,10 @@
     <div class="paper-container">
       <div class="paper-desc">
         <h3>Language-Agnostic Static Analysis of Probabilistic Programs</h3>
-        <i>Markus Böck, Michael Schröder, and Jürgen Cito. ASE 2024</i>
+        <i>Markus Böck, Michael Schröder, and Jürgen Cito. ASE 2024.</i>
         <p>
-          Describes a framework which allows the implementation of program analyses in a high-level API which target problems specific to the probabilistic programming environment.
-          Once the support  probabilistic programming language which implements the required bindings
+          Describes a framework which allows the formulation of program analyses which target problems specific to the probabilistic programming environment in a high-level API.
+          The analyses can be applied to any probabilistic programming language for which light-weight bindings are implemented.
         </p>
       </div>
       <div class="paper-image">
@@ -131,6 +131,7 @@
     
     [<a href="https://dl.acm.org/doi/10.1145/3691620.3695031">paper</a> | <a href="https://github.com/lasapp/lasapp">code</a> | <a class="bibtex">bibtex</a> | <a class="abstract">abstract</a>]
     <div class="paper-abstract">
+      <p>
         Probabilistic programming allows developers to focus on the modeling aspect in the Bayesian workflow by abstracting away the posterior inference machinery.
         In practice, however, programming errors specific to the probabilistic environment are hard to fix without deep knowledge of the underlying systems.
         Like in classical software engineering, static program analysis methods could be employed to catch many of these errors.
@@ -138,6 +139,7 @@
         While prior work focused on specific languages, all analyses written with our framework can be readily applied to new languages by adding easy-to-implement API bindings.
         Our prototype supports five popular probabilistic programming languages out-of-the-box.
         We demonstrate the effectiveness and expressiveness of the LASAPP framework by presenting four provably-correct language-agnostic probabilistic program analyses that address problems discussed in the literature and evaluate them on over 200 real-world programs.
+      </p>
     </div>
     <div class="paper-bibtex">
         <code>
@@ -150,5 +152,7 @@
           }
         </code>
     </div>
+
+    <div style="height:200px""></div>
 </body>
 </html>

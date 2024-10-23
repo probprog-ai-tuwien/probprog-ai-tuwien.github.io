@@ -1,3 +1,10 @@
+p {
+	text-align: justify;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
+}
+
 .paper-abstract {
     display:none
 }
@@ -23,7 +30,6 @@
 }
 
 .paper-image img {
-    width: 200px;
     overflow:hidden
 }
 
@@ -31,11 +37,18 @@ pre, code {
     background-color: transparent;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .paper-container {
         display: block;
     }
     .paper-desc {
         width:100%;
+    }
+    .paper-image {
+        width:50%;
+    }
+    .paper-image img {
+        max-width: 210px;
+        overflow:hidden
     }
 }
