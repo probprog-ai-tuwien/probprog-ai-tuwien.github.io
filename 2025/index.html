@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <style>
+    nav a::after {
+      content: " | ";
+    }
+
+    nav a:last-child::after {
+      content: "";
+    }
+
+    @media (max-width: 500px) {
+      th {
+        display: none;
+      }
+
+      tr, td {
+        display: block;
+      }
+
+      td:nth-child(1):not(:empty) {
+        font-weight: 600;
+        margin-top: 0.5em;
+      }
+
+      td:nth-child(2) {
+        margin-left: 1em;
+        padding-top: 0;
+      }
+
+      td:nth-child(3):not(:empty)::before {
+        content: "Recommended Reading ";
+        font-weight: 600;
+        display: block;
+      }
+
+      td:nth-child(3) {
+        margin-left: 1em;
+      }
+
+      td ul {
+        padding-left: 2em;
+      }
+    }
+  </style>
+  <link rel="shortcut icon" href="https://tuwel.tuwien.ac.at/pluginfile.php/2/theme_boost_union/favicon/64x64/1729573587/tuwel_favicon.png" />
+  <title>AI Programming WS25 -- TU Wien</title>
+</head>
+<body>
+  <header>
+    <h1>AI Programming WS25 - TU Wien</h1>
+    <nav>
+      <a href="#team">Team</a>
+      <a href="#registration">Registration</a>
+      <a href="#timetable">Timetable</a>
+      <a href="#lecture_mode">Lecture Mode</a>
+      <a href="#assignments">Assignments</a>
+      <a href="#project">Group Project</a>
+      <a href="#grading">Grading</a>
+      <a href="#academichonesty">Academic Honesty</a>
+
+    </nav>
+  </header>
+  <main>
+    <section id="team">
+      <h2>Team</h2>
+
+      <dl>
+        <dt>Professor</dt>
+        <dd><a href="https://ipa-lab.github.io/">Jürgen Cito</a></dd>
+
+        <dt>University Assistant</dt>
+        <dd><a href="mailto: markus.h.boeck@tuwien.ac.at">Markus Böck</a></dd>
+
+        <dt>Tutor</dt>
+        <dd>TBD</dd>
+
+        <!-- <dt>Course email</dt>
+        <dd><a href="mailto: web-engineering@big.tuwien.ac.at">web-engineering@big.tuwien.ac.at</a></dd> -->
+
+      </dl>
+
+      For Bachelor / Master thesis topics see the <a href="../index.html">project homepage</a>.
+    </section>
+
+
+    <section id="registration">
+      <h2>Registration</h2>
+      <p><em>Important!</em> Please register on <a href="https://tiss.tuwien.ac.at/course/educationDetails.xhtml?dswid=6456&dsrid=465&semester=2025W&courseNr=194193">TISS</a> until <em>09.10. 12:00 (strict deadline!)</em> to be able to participate in this course.</p>
+
+      <p>
+        All students registered in TISS until the deadline will have access to the course.<br>
+        To officially register, you have to complete Assignment 1 (A1), which will be available on <a href="https://tuwel.tuwien.ac.at/course/view.php?id=75654">TUWEL</a>.<br>
+        You will be able to deregister until 20.10. 23:55, which is also the deadline for A1. <br> If you have submitted A1 and you are not on the waiting list, you will receive a certificate (Zeugnis).<br>
+        If you are on the waiting list, you will also get access to the TUWEL course and still may want to complete A1. Typically, some students will drop out before A1 and you may get their spot.
+      </p>
+
+      <section>
+        <h3>Prerequisities</h3>
+        <p>
+          We expect that you have working knowledge of Python and are familiar with <a href="https://jupyter.org">Jupyter Notebooks</a>.<br>
+          We also require basic knowledge of probability theory and statistics.
+          This course will feature a lot of mathematics for expository reasons, altough we do not require you to do any mathematical manipulations in the exercises.
+        </p>
+      </section>
+    </section>
+
+    <section id="timetable">
+      <h2>Timetable/Lectures</h2>
+
+      <p>The following timetable lists all important dates for the course (lectures, assignment discussion sessions, deadlines, office hours) together with accompanying material (recommended reading, slides as PDFs).</p>
+
+      <!-- <p>Required reading should be done in preparation <em>before</em> the lecture!<br>
+         Reading material is not always strictly "reading", but can also involve interactive online exercises.<br>
+         <em>Note that:</em> The contents of the listed required readings will be part of the tests.
+      </p> -->
+
+      <p>
+        If a deadline is listed on a certain date, assume it due at 23:55 that day unless specified otherwise.<br>
+        All lecture dates are <i>cum tempore (c.t.)</i> - they will begin at quarter past.
+      </p>
+
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" width="120">Date</th>
+              <th scope="col">Content</th>
+              <th scope="col">Recommended Reading</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <!-- Lecture 1 -->
+              <td><strong>02.10.</strong><br><strong>11:00-12:00</strong><br><strong>FAV Hörsaal 1</strong></td>
+              
+              <td>
+                Kick-Off
+              </td>
+            </tr>
+
+
+            <tr>
+              <!-- Lecture 1 -->
+              <td>09.10.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              
+              <td>
+                Lecture 1
+                <ul>
+                  <li>Introduction to Probabilistic Programming</li>
+                  <li>Probability and Bayesian Statistics Primer</li>
+                  <!-- <li><a target="_blank" href="slides/VU_ProbProg_1.pdf">Slides: Probabilistic Programming and Artificial Intelligence - Kick Off</a></li> -->
+                  <!-- <li><a target="_blank" href="slides/intro_probability.html">Introduction to Probability Theory Notebook</a></li> -->
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a target="_blank" href="http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter1_Introduction/Ch1_Introduction_PyMC3.ipynb">Bayesian Methods for Hackers Probabilistic Programming and Bayesian Inference: Chapter 1</a></li>
+                  <li><a target="_blank" href="https://seeing-theory.brown.edu">Seeing Theory: Chapters 1,2,3,5</a></li>
+                  <li><a target="_blank" href="https://youtu.be/HZGCoVF3YvM?si=gw-H4lalEG8tR3PS">3Blue1Brown Bayes Theorem</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=8j2S7BRRWus">AI That Understands the World, Using Probabilistic Programming: until 25:00</a></li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- TISS Registration Deadline -->
+            <tr class="release">
+              <td><strong>09.10.</strong></td>
+              <td colspan="2"><strong>TISS Registration Deadline</strong></td>
+            </tr>
+
+            <!-- TUWEL -->
+            <tr class="release">
+              <td>09.10.</td>
+              <td colspan="2">TUWEL Course available</td>
+            </tr>
+
+            <!-- Release A1 -->
+            <tr class="release">
+              <td>09.10.</td>
+              <td colspan="2">Release Assignment 1 (A1)</td>
+            </tr>
+
+
+            <!-- Deadline A1 -->
+            <tr class="deadline">
+              <td><strong>20.10.</strong></td>
+              <td colspan="2"><strong>A1 Deadline</strong></td>
+            </tr>
+
+            <!-- TISS De-Registration Deadline -->
+            <tr class="release">
+              <td><strong>20.10.</strong></td>
+              <td colspan="2"><strong>TISS Deregistration Deadline</strong></td>
+            </tr>
+
+
+            <!-- Lecture 2 -->
+            <tr>
+              <td>30.10.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              <td>
+                Lecture 2:<br>
+                <ul>
+                  <li>Bayesian Inference and Generative Modelling</li>
+                  <li>Probabilistic Programming Languages</li>
+                  <li>Implementation Designs</li>
+                  <li>Minimal PPL Implementation</li>
+                  <li>Independent Sampling</li>
+                  <!-- <li><a target="_blank" href="slides/VU_ProbProg_2.pdf">Lecture 2 Slides: Introduction to PPLs</a></li>
+                  <li>Lecture 2 Notebook <a target="_blank" href="slides/lecture_2_intro_ppl.html">[html]</a><a href="slides/lecture_2_intro_ppl.ipynb" download>[ipynb]</a></li> -->
+                </li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=3jP4H0kjtng">The better way to do statistics (Bayesian view of probability)</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=8wVq5aGzSqY">The biggest beef in statistics explained (Frequentist vs Bayesian)</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=yvWlpwnT1nw">Intuition behind Bayesian inference</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=EHqU9LE9tg8">Bayesian posterior sampling</a></li>
+                  <li><a target="_blank" href="http://probmods.org/chapters/generative-models.html">Generative Models</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=TFXcVlKqPlM">A Personal Viewpoint on Probabilistic Programming</a></li>
+                </ul>
+              </td>
+            </tr>
+
+            
+            <!-- Release A2 -->
+            <tr class="release">
+              <td>30.10.</td>
+              <td>Release Assignment 2 (A2)</td>
+              <td>
+                Inspiration for models:
+                <ul>
+                  <li><a target="_blank" href="https://turinglang.org/dev/tutorials/">Turing Tutorials</a></li>
+                  <li><a target="_blank" href="https://mc-stan.org/docs/stan-users-guide/example-models.html">Stan Tutorials</a></li>
+                  <li><a target="_blank" href="https://github.com/stan-dev/example-models">Repository with Stan models</a></li>
+                  <li><a target="_blank" href="https://github.com/pymc-devs/pymc-resources">Repository with PyMC models</a></li>
+                </ul>
+              </td>
+            </tr>
+
+
+            <!-- Lecture 3 -->
+            <tr>
+              <td>06.11.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              <td>
+                Lecture 3:
+                <ul>
+                  <li>Dependent Sampling</li>
+                  <li>Markov Chain Monte Carlo</li>
+                  <li>Metropolis Hastings Algorithm</li>
+                  <li>Hamiltonian Monte Carlo</li>
+                  <!-- <li><a target="_blank" href="slides/VU_ProbProg_3.pdf">Lecture 3 Slides: MCMC Inference</a></li>
+                  <li>Lecture 3 Notebook <a target="_blank" href="slides/lecture_3_mcmc.html">[html]</a><a href="slides/lecture_3_mcmc.ipynb" download>[ipynb]</a></li> -->
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=CfpRdmddVPM">Why we use dependent sampling to sample from the posterior</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=U561HGMWjcw">An introduction to the Random Walk Metropolis algorithm</a></li>
+                  <li><a target="_blank" href="http://proceedings.mlr.press/v15/wingate11a/wingate11a.pdf">Paper: Single-Site MH for PPL</a></li>
+                  <li><a target="_blank" href="http://www.mcmchandbook.net/HandbookChapter5.pdf">Handbook of MCMC: Chapter 5: MCMC Using Hamiltonian Dynamics</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=a-wydhEuAm0">The intuition behind the Hamiltonian Monte Carlo algorithm</a></li>
+                  <li><a target="_blank" href="https://chi-feng.github.io/mcmc-demo/app.html">MCMC Interactive Gallery</a></li>
+                  <li><a target="_blank" href="https://arxiv.org/pdf/1111.4246.pdf">Paper: No-U-Turn Sampler</a></li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Release A3 -->
+            <tr class="release">
+              <td>06.11.</td>
+              <td colspan="2">Release Assignment 3 (A3)</td>
+            </tr>
+
+
+            <!-- Lecture 4 -->
+            <tr>
+              <td>13.11.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              <td>
+                Lecture 4:
+                <ul>
+                  <li>Variational Inference</li>
+                  <li>Automatic Differentiation VI</li>
+                  <li>Stochastic VI</li>
+                  <!-- <li><a target="_blank" href="slides/VU_ProbProg_4.pdf">Lecture 4 Slides: Variational Inference</a></li> -->
+                  <!-- <li>Lecture 4 Notebook <a target="_blank" href="slides/lecture_4_vi.html">[html]</a><a href="slides/lecture_4_vi.ipynb" download>[ipynb]</a></li> -->
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=9_eZHt2qJs4">KL Divergence - Clearly explained!</a></li>
+                  <li><a target="_blank" href="https://www.youtube.com/watch?v=HxQ94L8n0vU">Variational Inference + ELBO Intuition</a></li>
+                  <li><a target="_blank" href="https://medium.com/@rhome/automatic-differentiation-26d5a993692b">Automatic Differentiation and Gradient Descent</a></li>
+                  <li><a target="_blank" href="https://arxiv.org/pdf/1603.00788.pdf">Paper: Automatic Differentiation Variational Inference</a></li>
+                  <li><a target="_blank" href="https://arxiv.org/pdf/1312.6114.pdf">Paper: Stochastic Variational Inference</a></li>
+                </ul>
+              </td>
+            </tr>
+
+            <!-- Deadline A2 -->
+            <tr class="deadline">
+              <td><strong>13.11.</strong></td>
+              <td colspan="2"><strong>A2 Deadline</strong></td>
+            </tr>
+
+            <!-- Release A4 -->
+            <tr class="release">
+              <td>13.11.</td>
+              <td colspan="2">Release Assignment 4 (A4)</td>
+            </tr>
+            <!-- Test 1-->
+            <tr class="test">
+              <td><strong>20.11.<br>10:00-12:00</strong><br><strong>Zoom</strong></td>
+              <td colspan="2"><strong>Assignment Discussion Session A1 & A2</strong><br>
+                <strong>Online, Zoom link in TUWEL</strong><br>
+                <strong>Attendance is mandatory!</strong>
+              </td>
+            </tr>
+
+
+            <!-- Lecture 5 -->
+            <tr>
+              <td>27.11.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              <td>
+                Lecture 5:
+                <ul>
+                  <li>Hands-On Probabilistic Programming</li>
+                  <!-- <li>Lecture 5 Notebook <a target="_blank" href="slides/turing-time-series.html">[html]</a><a target="_blank" href="https://github.com/probprog-ai-tuwien/turing-time-series/tree/ws24" download>[ipynb]</a></li> -->
+                </ul>
+              </td>
+              <td>
+                <li><a target="_blank" href="https://www.tandfonline.com/doi/pdf/10.1080/00031305.2017.1380080">Facebook Prophet Paper</a></li>
+              </td>
+            </tr>
+
+            <!-- Deadline A3 -->
+            <tr class="deadline">
+              <td><strong>27.11.</strong></td>
+              <td colspan="2"><strong>A3 Deadline</strong></td>
+            </tr>
+
+
+
+            <!-- Lecture 6 -->
+            <tr>
+              <td>04.12.<br>10:00-12:00<br>FAV Hörsaal 2</td>
+              <td>
+                Lecture 6:
+                <ul>
+                  <li>Custom Inference</li>
+                  <li>Data-Driven Inference</li>
+                  <li>Probabilistic Programs as Proposals</li>
+                  <li>Deep Propbabilistic Programming</li>
+                  <!-- <li><a target="_blank" href="slides/VU_ProbProg_5.pdf">Lecture 6 Slides: Advanced Topics</a></li> -->
+                </ul>
+              </td>
+              <td>
+        
+                <!-- <li>Probabilistic Graphical Models - D Koller, N Friedman - 2009: Chapter 2.1.4 and 3</li> -->
+                <li><a target="_blank" href="https://academic.oup.com/jrsssb/article-pdf/59/4/731/49588858/jrsssb_59_4_731.pdf">Paper: On Bayesian Analysis of Mixtures with an Unknown Number of Components</a></li>
+                <li><a target="_blank" href="https://www.gen.dev/tutorials/rj/tutorial">RJMCMC / Involutive MCMC in Gen Tutorial</a></li>
+                <li><a target="_blank" href="https://people.eecs.berkeley.edu/~russell/papers/aabi21-oupm.pdf">Paper: Transforming Worlds: Automated Involutive MCMC for Open-Universe Probabilistic Models</a></li>
+                <li><a target="_blank" href="https://www.gen.dev/tutorials/data-driven-proposals/tutorial">Data-Driven Proposals in Gen Tutorial</a></li>
+                <li><a target="_blank" href="https://arxiv.org/pdf/1801.03612.pdf">Paper: Using probabilistic programs as proposals</a></li>
+                <li><a target="_blank" href="https://arxiv.org/pdf/1810.09538.pdf">Paper: Pyro: Deep Universal Probabilistic Programming</a></li>
+                <li><a target="_blank" href="https://arxiv.org/pdf/1809.10756.pdf">An Introduction to Probabilistic Programming: Chapter 8 Deep Probabilistic Programming</a></li>
+                <li><a target="_blank" href="https://pyro.ai/examples/svi_part_iii.html">Pyro ELBO Gradients Estimators</a></li>
+                <li><a target="_blank" href="https://arxiv.org/pdf/1312.6114.pdf">Paper: Auto-Encoding Variational Bayes</a></li>
+                <li><a target="_blank" href="https://pyro.ai/examples/ss-vae.html">Pyro Semi-Supervised Variational Auto-Encoder</a></li>
+                
+              </td>
+            </tr>
+
+            <!-- Deadline A4 -->
+            <tr class="deadline">
+              <td><strong>11.12.</strong></td>
+              <td colspan="2"><strong>A4 Deadline</strong></td>
+            </tr>
+
+            <!-- Test 2-->
+            <tr class="test">
+              <td><strong>11.12.<br>10:00-12:00</strong><br><strong>Zoom</strong></td>
+              <td colspan="2"><strong>Assignment Discussion Session A3 & A4</strong><br>
+                <strong>Online, Zoom link in TUWEL</strong><br>
+                <strong>Attendance is mandatory!</strong>
+              </td>
+            </tr>
+
+            <!-- Lecture 7 -->
+            <!-- <tr>
+              <td>11.12.<br>13:00-14:00<br>FAV Hörsaal 2</td>
+              <td>TBD
+              </td>
+              <td>
+              </td>
+            </tr> -->
+
+            <tr class="test">
+              <td><strong>09.01.</strong></td>
+              <td colspan="2"><strong>Project Report Deadline</strong><br>
+            </td>
+            </tr>
+
+            <tr class="test">
+              <td><strong>26.01. - 30.1.</strong></td>
+              <td colspan="2"><strong>Oral Exams</strong><br>
+            </td>
+            </tr>
+            
+          </tbody>
+        </table>
+
+    <section id="lecture_mode">
+      <h2>Lecture Mode</h2>
+      The six lectures will be held in-person in FAV Hörsaal 2 (attendance not mandatory).<br>
+      
+      There are four <strong>individual</strong> assignments which you have to complete on JupyterHub.<br>
+
+      The assignment discussion session are online via Zoom and <strong>attendance is required</strong>.
+      You will be asked to share your solution to an assignment problem.<br>
+
+      With a project partner you complete a small project probabilistic programming and submit a written report.<br>
+
+      You finish the course with an oral exam at the end of January.
+
+    </section>
+
+    <section id="assignments">
+      <h2>Assignments</h2>
+      <article>
+        In addition to the lecture, you will implement a minimal probabilistic programming language in <strong>individual</strong> assignments (A1 to A4):
+        <ul>
+
+          <li><em>Assignment 1 (A1) - Introduction to PPL (10 points)</em>: This will be your first hands-on experience with probabilistic programming.</li>
+
+          <li><em>Assignment 2 (A2) - Minimal PPL + Likelihood Weighting (10 points)</em>: You learn how to implement the core of a PPL in Python and write your first inference algorithm.</li>
+
+          <li><em>Assignment 3 (A3) - Metropolis Hastings (10 points)</em>: You implement the general-purpose  Metropolis Hastings inference algorithm</li>
+
+          <li><em>Assignment 4 (A4) - HMC and ADVI (10 points)</em>: You implement the state-of-the-art inference algorithms HMC and ADVI</li>
+        </ul>
+
+        In some assignments you may be asked to test an inference algorithm on a model of your choice.
+        If you do not know what to implement, checkout these resources for inspiration:
+        <ul>
+          <li><a target="_blank" href="https://turinglang.org/dev/tutorials/">Turing Tutorials</a></li>
+          <li><a target="_blank" href="https://mc-stan.org/docs/stan-users-guide/example-models.html">Stan Tutorials</a></li>
+          <li><a target="_blank" href="https://github.com/stan-dev/example-models">Repository with Stan models</a></li>
+          <li><a target="_blank" href="https://github.com/pymc-devs/pymc-resources">Repository with PyMC models</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="project">
+      <h2>Group Project</h2>
+      <article>
+        In pairs of 2 students, you will work on a small project.<br>
+        
+        In this project, you can either:
+        <ul>
+          <li>Apply probabilistic programming to a real-world data set.</li>
+          <li>Implement an inference algorithm in our minimal PPL.</li>
+        </ul>
+        
+        In January, you submit a three page written report summarising your project.<br>
+
+        More details follow.
+        
+        
+      </article>
+    </section>
+
+    <section id="exam">
+      <h2>Oral Exam</h2>
+      <article>
+        At the end of the semester, you take an oral exam with your project partner, where we ask:
+        <ul>
+          <li>Questions about your project</li>
+          <li>Questions from a catalog, which we will share with you after the lectures</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="grading">
+      <h2>Grading</h2>
+
+      Your grade will be a combination of assignments scores and final project score.
+
+      <ul>
+        <li>40% Assignments</li>
+        <li>60% Project and Exam</li>
+      </ul>
+      <h3>Grading Scale</h3>
+      The points of the theoretical and practical part sum to exactly 100 points.
+      The points map to grades as follows:
+      <ul>
+        <li><em>S1:</em> 88-100</li>
+        <li><em>U2:</em> 75-87.99</li>
+        <li><em>B3:</em> 63-74.99</li>
+        <li><em>G4:</em> 50-62.99</li>
+        <li><em>N5:</em> 0-49.99</li>
+      </ul>
+    </section>
+
+    <section id="academichonesty">
+      <h3>Academic Honesty</h3>
+      We expect all students to work on their own (both for the practical assignments and the group project).
+      Any kind of plagiarism will result in expulsion of the course with a grade N5 (Nicht Genügend).
+    </section>
+  </main>
+</body>
+</html>
